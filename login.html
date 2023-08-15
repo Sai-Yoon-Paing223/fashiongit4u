@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD Assignment Sai Yoon Paing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+
+    <section id="header">
+        <a href="index.html"><img src="Logo_1.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="login.html">Login</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">         
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+
+
+    <div class="hero2">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="facebook.svg">
+                <img src="twitter.svg">
+                <img src="google.svg">
+                
+            </div>
+            <form id="login2" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                <a href="index.html"><button type="button" class="submit-btn">Log in</button></a>
+            </form>
+            <form id="register"  class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+        
+    
+    
+
+    <script>
+        var x = document.getElementById("login2");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px"; 
+    }
+
+        function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }
+
+    function validateAndSubmitLogin() {
+        var userId = document.getElementById("loginUserId").value;
+        var password = document.getElementById("loginPassword").value;
+
+        // Simulate authentication (replace with actual authentication logic)
+        if (userId === "exampleUser" && password === "examplePassword") {
+            alert("Login successful. Redirecting to home page...");
+            // Simulate redirecting to the home page (replace with actual redirect)
+            window.location.href = "home.html";
+        } else {
+            alert("Invalid credentials. Please try again.");
+        }
+
+        return false; // Prevent form submission
+    }
+
+    
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
